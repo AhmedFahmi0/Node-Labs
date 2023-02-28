@@ -1,0 +1,50 @@
+
+sum:undefined58
+sum:NaN
+sum:NaN
+multiply: NaN
+multiply: 0
+multiply: 0
+sum:13
+sum:12
+sum:12
+sum:NaN
+sum:7
+sum:7
+sum:13
+sum:30
+sum:35
+multiply: 0
+multiply: 40
+multiply: 800
+sum:13
+sum:14-1
+                
+sum:14-1
+                
+sum:14-1
+                
+sum:14-1
+                
+sum:13
+multiply: 0
+multiply: 0
+multiply: 0
+multiply: 8
+multiply: 8
+multiply: 40
+multiply: 56
+divide: 0.001953125
+divide: 1
+divide: 1
+divide: 1
+sum:72
+subtract: -72
+subtract: -8
+subtract: -8
+subtract: 56
+subtract: 56
+sum:72
+multiply: 32
+divide: 8
+divide: 9

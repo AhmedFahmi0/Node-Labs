@@ -57,18 +57,21 @@ function printError(elemId, hintMsg) {
   };
  
   const getInfoPromise = async () => {
-    const response = await fetch("./contact.json");
+    const response = await fetch("/contact.json");
     const data = await response.json();
   
     return data;
   };
+
   getInfoPromise().then((data) => {
     var nme = document.querySelector("#formNme");
     var mail = document.querySelector("#formEmail");
     var mob = document.querySelector("#formMob");
     var add = document.querySelector("#formAdd");
-    nme.innerHTML=`Welcome ${data.nme} you entered data as follows:`;
-    mail.innerHTML=`Email : ${data.email}`;
-    mob.innerHTML=`MobileNumber : ${data.mobile}`;
-    add.innerHTML=`Address : ${data.address}`;
+    nme.innerHTML=`<div>Welcome ${data.nme} you entered data as follows:</div>`;
+    mail.innerHTML=`<div>Email : ${data.email}</div>`;
+    mob.innerHTML=`<div>MobileNumber : ${data.mobile}</div>`;
+    add.innerHTML=`<div>Address : ${data.address}</div>`;
+  }).catch((err) => {
+    console.log("hiiiii")
   });

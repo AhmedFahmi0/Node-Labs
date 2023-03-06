@@ -4,7 +4,7 @@ const fs = require("fs");
 let MainFileHTML = fs.readFileSync("./main.html").toString();
 let ProfileFileHTML = fs.readFileSync("./profile.html").toString();
 let StyleCSS = fs.readFileSync("./style.css").toString();
-let ScriptFile = fs.readFileSync("./script.js").toString();
+let ScriptFile = fs.readFileSync("./scipt.js").toString();
 let JSONFile = fs.readFileSync("./contact.json").toString();
 //let myImage = fs.readFileSync("../ClientSide/2.jpg");
 //let myIcon = fs.readFileSync("../ClientSide/favicon.ico");
@@ -26,7 +26,7 @@ http.createServer((req,res)=>{
                     res.writeHead(200,"Ok",{"content-type":"text/css"})
                     res.write(StyleCSS)
                 break;
-                case "/script.js":
+                case "/scipt.js":
                     res.writeHead(300,"Hii",{"content-type":"text/javascript"})
                     res.write(ScriptFile)
                 break;
@@ -80,15 +80,11 @@ http.createServer((req,res)=>{
             })});
             req.on("end",()=>{
 
-                ProfileFileHTML = ProfileFileHTML.replace("Name",`${userName[1]}`)
-                                                 .replace("email",`${userName[3]}`)
-                                                 .replace("MobNum",`${userName[5]}`)
-                                                 .replace("add",`${userName[7]}`)
-                                                 .replace("%40","@")
+                ProfileFileHTML = ProfileFileHTML.replace("%40","@")
                                                  .replace("%2B","")
                                                  .replaceAll("+"," ")
                                             
-                res.write(ProfileFileHTML)
+               res.write(ProfileFileHTML)
                 res.end();
             })
             

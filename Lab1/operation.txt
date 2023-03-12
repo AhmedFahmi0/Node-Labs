@@ -48,3 +48,4 @@ sum:72
 multiply: 32
 divide: 8
 divide: 9
+sum:7
